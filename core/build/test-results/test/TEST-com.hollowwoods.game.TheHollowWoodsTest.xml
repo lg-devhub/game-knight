@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.hollowwoods.game.TheHollowWoodsTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-11-12T21:36:28.975Z" hostname="DESKTOP-0IGCDIU" time="0.089">
+  <properties/>
+  <testcase name="testAudioMixerVolumeChannelsAndFormulas()" classname="com.hollowwoods.game.TheHollowWoodsTest" time="0.027"/>
+  <testcase name="testWatcherOccludedByObstacleRaycast()" classname="com.hollowwoods.game.TheHollowWoodsTest" time="0.015"/>
+  <testcase name="testVisualAssetFilesPresenceAndIntegrity()" classname="com.hollowwoods.game.TheHollowWoodsTest" time="0.002"/>
+  <testcase name="testAudioFilesPresenceAndIntegrity()" classname="com.hollowwoods.game.TheHollowWoodsTest" time="0.002"/>
+  <testcase name="testInventoryManagement()" classname="com.hollowwoods.game.TheHollowWoodsTest" time="0.004"/>
+  <testcase name="testCurseSystemModifiesGameplay()" classname="com.hollowwoods.game.TheHollowWoodsTest" time="0.001"/>
+  <testcase name="testStageProgressionAndStructure()" classname="com.hollowwoods.game.TheHollowWoodsTest" time="0.014"/>
+  <testcase name="testWatcherBeyondFlashlightRangeNotObserved()" classname="com.hollowwoods.game.TheHollowWoodsTest" time="0.001"/>
+  <testcase name="testStageVisualLayoutsAndObjectives()" classname="com.hollowwoods.game.TheHollowWoodsTest" time="0.004"/>
+  <testcase name="testAudioMuteAndUnmuteBehaviors()" classname="com.hollowwoods.game.TheHollowWoodsTest" time="0.0"/>
+  <testcase name="testWatcherFrozenWhenDirectlyObserved()" classname="com.hollowwoods.game.TheHollowWoodsTest" time="0.0"/>
+  <testcase name="testWatcherMovesWhenBehindPlayer()" classname="com.hollowwoods.game.TheHollowWoodsTest" time="0.001"/>
+  <testcase name="testScoringCalculation()" classname="com.hollowwoods.game.TheHollowWoodsTest" time="0.004"/>
+  <testcase name="testFlashlightOffAllowsWatcherMovement()" classname="com.hollowwoods.game.TheHollowWoodsTest" time="0.001"/>
+  <testcase name="testAudioPauseStateAttenuation()" classname="com.hollowwoods.game.TheHollowWoodsTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,72 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://s01.oss.sonatype.org' }
+        gradlePluginPortal()
+    }
+}
+
+allprojects {
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+
+    version = '1.0.0'
+    ext {
+        appName = 'The Hollow Woods'
+        gdxVersion = '1.13.1'
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://s01.oss.sonatype.org' }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+        maven { url 'https://oss.sonatype.org/content/repositories/releases/' }
+        maven { url 'jitpack.io' }
+    }
+}
+
+project(':core') {
+    apply plugin: 'java-library'
+
+    dependencies {
+        api "com.badlogicgames.gdx:gdx:$gdxVersion"
+        api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+        testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+}
+
+project(':lwjgl3') {
+    apply plugin: 'application'
+
+    dependencies {
+        implementation project(':core')
+        implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+        implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+    }
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    application {
+        mainClass = 'com.hollowwoods.game.lwjgl3.Lwjgl3Launcher'
+    }
+
+    sourceSets.main.resources.srcDirs += [rootProject.file('assets')]
+
+    tasks.named('run', JavaExec) {
+        workingDir = rootProject.file('assets')
+        ignoreExitValue = true
+    }
+}
